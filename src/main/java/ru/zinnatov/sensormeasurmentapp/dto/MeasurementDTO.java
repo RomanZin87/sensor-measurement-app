@@ -12,7 +12,7 @@ public class MeasurementDTO {
 
     @DecimalMin(value = "-100.0", message = "Value should be between -100.0 and 100.0")
     @DecimalMax(value = "100.0", message = "Value should be between -100.0 and 100.0")
-    @Digits(integer = 4, fraction = 1)
+    @Digits(integer = 4, fraction = 2)
     private double value;
 
     @NotNull

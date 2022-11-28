@@ -30,8 +30,8 @@ public class MeasurementsService {
     }
 
     private void enrichMeasurement(Measurement measurement) {
+        // должны найти сенсор в бд и вставить объект из hibernate context
         measurement.setSensor(sensorsService.findBySensorName(measurement.getSensor().getName()).get());
-
         measurement.setMeasurementTime(LocalDateTime.now());
     }
 

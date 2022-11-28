@@ -13,27 +13,28 @@ public class MeasurementDTO {
     @DecimalMin(value = "-100.0", message = "Value should be between -100.0 and 100.0")
     @DecimalMax(value = "100.0", message = "Value should be between -100.0 and 100.0")
     @Digits(integer = 4, fraction = 2)
-    private double value;
+    private Double value;
 
     @NotNull
-    private boolean raining;
+    private Boolean raining;
 
     @NotNull
     private SensorDTO sensor;
 
-    public double getValue() {
+    @NotNull
+    public Double getValue() {
         return value;
     }
 
-    public void setValue(double value) {
+    public void setValue(Double value) {
         this.value = value;
     }
 
-    public boolean isRaining() {
+    public Boolean getRaining() {
         return raining;
     }
 
-    public void setRaining(boolean raining) {
+    public void setRaining(Boolean raining) {
         this.raining = raining;
     }
 

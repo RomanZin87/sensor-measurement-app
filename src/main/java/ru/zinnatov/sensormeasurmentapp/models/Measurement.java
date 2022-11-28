@@ -21,10 +21,10 @@ public class Measurement {
     @DecimalMax(value = "100.0", message = "Value should be between -100.0 and 100.0")
     @Digits(integer = 4, fraction = 2)
     @Column(name = "value")
-    private double value;
+    private Double value;
 
     @NotNull
-    private boolean raining;
+    private Boolean raining;
 
     @Column(name = "measurement_time")
     @NotNull
@@ -46,19 +46,19 @@ public class Measurement {
         this.id = id;
     }
 
-    public double getValue() {
+    public Double getValue() {
         return value;
     }
 
-    public void setValue(double value) {
+    public void setValue(Double value) {
         this.value = value;
     }
 
-    public boolean isRaining() {
+    public Boolean getRaining() {
         return raining;
     }
 
-    public void setRaining(boolean raining) {
+    public void setRaining(Boolean raining) {
         this.raining = raining;
     }
 
